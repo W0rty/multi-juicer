@@ -51,10 +51,10 @@ balancer:
     externalIPs: null
   resources:
     requests:
-      memory: 256Mi
+      memory: 512Mi
       cpu: 400m
     limits:
-      memory: 256Mi
+      memory: 512Mi
       cpu: 400m
   securityContext: {}
   # -- Optional Configure kubernetes scheduling affinity for the created JuiceShops (see: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity)
@@ -79,7 +79,7 @@ balancer:
 
 juiceShop:
   # -- Specifies how many JuiceShop instances MultiJuicer should start at max. Set to -1 to remove the max Juice Shop instance cap
-  maxInstances: 10
+  maxInstances: 30
   # -- Juice Shop Image to use
   image: bkimminich/juice-shop
   tag: v14.5.1
